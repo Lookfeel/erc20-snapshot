@@ -1,0 +1,12 @@
+[
+  {
+    "wallet": "0xd00d1eEc7502d8A5a85FeEeE561352068B929a98",
+    "balance": "10000",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xA31f5bD5Cc1e975A3791015237951F9D6073c42E",
+    "balance": "0",
+    "type": "wallet"
+  }
+]
