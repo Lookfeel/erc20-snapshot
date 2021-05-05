@@ -1,0 +1,47 @@
+[
+  {
+    "wallet": "0x8a8232270996FC8F2E55A1b0701B874248e04164",
+    "balance": "4722222222222222222.22222222222222222222",
+    "type": "contract"
+  },
+  {
+    "wallet": "0x3a3355805181ba5752cB52CEBE8C95c0F3ED3d61",
+    "balance": "537972222222222222222.22222222222222222222",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x8c1a0B65F5218649Db12fcbB2fB6Ad246f399bd6",
+    "balance": "2777777777777777777.77777777777777777778",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x1E36A5979c613F52F8CB956638B07602C7e7e1F7",
+    "balance": "1111111111111111111.11111111111111111111",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x83C9440dc34DA00c47A0d4dC2b598d7BDB1b53F7",
+    "balance": "916666666666666666.66666666666666666667",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x52AF787439a82f36d6eF6B0dA0f0E5eCCe29fF90",
+    "balance": "833333333333333333.33333333333333333333",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x9372fE6d14d57988B7EC923815Cc9243B313D532",
+    "balance": "833333333333333333.33333333333333333333",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xE9537a222A879646f8397e02E33b3f9919Ca64bb",
+    "balance": "833333333333333333.33333333333333333333",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x38dAEa6f17E4308b0Da9647dB9ca6D84a3A7E195",
+    "balance": "0",
+    "type": "wallet"
+  }
+]

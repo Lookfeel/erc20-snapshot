@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const Config = require("../config").getConfig();
 
 const { promisify } = require("util");
 
@@ -26,6 +27,14 @@ module.exports.getEvents = async symbol => {
   var files = await readdirAsync(directory);
   files.sort((a,b) => {
     return parseInt(a.split(".")[0]) - parseInt(b.split(".")[0]);
+  });
+
+  files = files.filter(a => {
+    const blockNumber = parseInt(a.split(".")[0]);
+    const fromBlock = parseInt(Config.fromBlock);
+    const toBlock = parseInt(Config.toBlock);
+
+    return blockNumber >= fromBlock && blockNumber <= toBlock
   });
   
   let events = [];
