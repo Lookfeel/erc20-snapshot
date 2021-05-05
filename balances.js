@@ -9,8 +9,8 @@ module.exports.createBalances = async data => {
   const setDeposits = event => {
     const wallet = event.to;
 
-    let deposits = (balances.get(wallet) || {}).deposits || new BigNumber(0);
-    let withdrawals = (balances.get(wallet) || {}).withdrawals || new BigNumber(0);
+    let deposits = new BigNumber((balances.get(wallet) || {}).deposits || 0);
+    let withdrawals = new BigNumber((balances.get(wallet) || {}).withdrawals || 0);
 
     if (event.value) {
       deposits = deposits.plus(new BigNumber(event.value));
@@ -21,8 +21,8 @@ module.exports.createBalances = async data => {
   const setWithdrawals = event => {
     const wallet = event.from;
 
-    let deposits = (balances.get(wallet) || {}).deposits || new BigNumber(0);
-    let withdrawals = (balances.get(wallet) || {}).withdrawals || new BigNumber(0);
+    let deposits =  new BigNumber((balances.get(wallet) || {}).deposits || 0);
+    let withdrawals =  new BigNumber((balances.get(wallet) || {}).withdrawals || 0);
 
     if (event.value) {
       withdrawals = withdrawals.plus(new BigNumber(event.value));
@@ -44,7 +44,7 @@ module.exports.createBalances = async data => {
 
     closingBalances.push({
       wallet: key,
-      balance: balance.div(10 ** parseInt(data.decimals)).toFixed(data.decimals)
+      balance: balance.div(new BigNumber(10).times(parseInt(data.decimals))).toFixed()
     });
   }
 
