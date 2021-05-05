@@ -1,0 +1,37 @@
+[
+  {
+    "wallet": "0x97ac1976654dF6Ea6Fcff6d8FD60FE96412280E0",
+    "balance": "97990",
+    "type": "contract"
+  },
+  {
+    "wallet": "0xA31f5bD5Cc1e975A3791015237951F9D6073c42E",
+    "balance": "1000",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x52AF787439a82f36d6eF6B0dA0f0E5eCCe29fF90",
+    "balance": "200",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xDbB59151b18Dd72E9AC092706e93De5b5d7a9325",
+    "balance": "0",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x1E36A5979c613F52F8CB956638B07602C7e7e1F7",
+    "balance": "0",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x9023Ef16968FFea318838A223ef2A79bd9f99F88",
+    "balance": "0",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xC3746825f13c07Dcd7e6fDb9C0c80A9aFFb18952",
+    "balance": "0",
+    "type": "wallet"
+  }
+]
