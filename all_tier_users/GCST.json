@@ -1,0 +1,22 @@
+[
+  {
+    "wallet": "0x16379bcACb145907d39850F305CaD627cb63e6F3",
+    "balance": "2",
+    "type": "contract"
+  },
+  {
+    "wallet": "0xDbB59151b18Dd72E9AC092706e93De5b5d7a9325",
+    "balance": "0",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x1ADA6a33583079f89874DC394fcacA7C59b5Bcbe",
+    "balance": "0",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xCF16c71fE06d5D8ED9a7838e9444c3fd8D822baD",
+    "balance": "0",
+    "type": "wallet"
+  }
+]
