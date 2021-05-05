@@ -44,7 +44,7 @@ module.exports.createBalances = async data => {
 
     closingBalances.push({
       wallet: key,
-      balance: balance.div(new BigNumber(10).times(parseInt(data.decimals))).toFixed()
+      balance: balance.div(new BigNumber(10).pow(18)).toFixed()
     });
   }
 
