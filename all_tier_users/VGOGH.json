@@ -1,0 +1,12 @@
+[
+  {
+    "wallet": "0xDF87E7937825534C37CB512140aF9a0F14BF0A36",
+    "balance": "9400",
+    "type": "contract"
+  },
+  {
+    "wallet": "0xE404B72b76912054Aa0178e27E0Aa6D384Dab44B",
+    "balance": "0",
+    "type": "wallet"
+  }
+]
