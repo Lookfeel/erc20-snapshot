@@ -1,0 +1,27 @@
+[
+  {
+    "wallet": "0xa17e27E43689E06c7F0De5Af31373117D6F024E6",
+    "balance": "9.903114212829783549",
+    "type": "contract"
+  },
+  {
+    "wallet": "0x1E36A5979c613F52F8CB956638B07602C7e7e1F7",
+    "balance": "9872.999999999999968377",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0xDbB59151b18Dd72E9AC092706e93De5b5d7a9325",
+    "balance": "5.000000000000000537",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x2A3F7E5170Ea8Ca967f85f091eF84591f639E031",
+    "balance": "1",
+    "type": "wallet"
+  },
+  {
+    "wallet": "0x92b406851390541F445B7C697014133d4B5BfcE3",
+    "balance": "0.096885787170247537",
+    "type": "wallet"
+  }
+]

@@ -42,6 +42,13 @@ module.exports.createBalances = async data => {
 
     const balance = value.deposits.minus(value.withdrawals);
 
+    // console.log({
+    //   wallet: key,
+    //   deposits: value.deposits.toFixed(),
+    //   withdrawals: value.withdrawals.toFixed(),
+    //   balance: balance.toFixed()
+    // });
+
     closingBalances.push({
       wallet: key,
       balance: balance.div(new BigNumber(10).pow(18)).toFixed()
