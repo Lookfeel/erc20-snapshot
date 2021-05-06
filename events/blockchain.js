@@ -29,6 +29,11 @@ const groupBy = (objectArray, property) => {
 
 const tryGetEvents = async (start, end, symbol) => {
   try {
+    console.log({
+      start,
+      end,
+      symbol
+    });
     const pastEvents = await Contract.getPastEvents("Transfer", { fromBlock: start, toBlock: end });
 
     if (pastEvents.length) {
