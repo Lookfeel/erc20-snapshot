@@ -30,7 +30,9 @@ const start = async () => {
   //   offeringAddress: 'y0m4m4'
   // });
 
-  await getContributions();
+  // await getContributions();
+
+  await readAllContributors();
 };
 
 const writeFile = async({
@@ -38,6 +40,12 @@ const writeFile = async({
   offeringAddress
 }) => {
   fileHelper.writeFile(path.join(process.cwd(), 'launches_txn', `${offeringAddress}.json`), data);
+}
+
+const writeAllContributors = async({
+  data,
+}) => {
+  fileHelper.writeFile(path.join(process.cwd(), `contributors.json`), data);
 }
 
 const getContributions = async () => {
@@ -73,27 +81,55 @@ const getContributions = async () => {
     data: allContributions,
     offeringAddress: config.offeringAddress.toLowerCase()
   });
-} 
+}
 
-// const readAllTierUsers = async () => {
-//   const directory = path.join(process.cwd(), 'all_tier_users');
-//   const files = await readdirAsync(directory);
+const getWalletType = async (wallet) => {
+  let type = 'wallet';
+
+  try {
+    const code = await web3.eth.getCode(wallet);
+    if (code !== '0x') {
+      type = 'contract'
+    }
+  } catch (err) {
+    // consume err
+  }
+
+  return type;
+}
+
+const readAllContributors = async () => {
+  const directory = path.join(process.cwd(), 'launches_txn');
+  const files = await readdirAsync(directory);
   
-//   let allBalances = [];
-//   for await (const file of files) {
-//     console.log("Parsing ", file);
+  let allContributors = [];
+  for await (const file of files) {
+    console.log("Parsing ", file);
 
-//     const contents = await readFileAsync(path.join(directory, file));
-//     const parsed = JSON.parse(contents.toString());
-//     allBalances = allBalances.concat(parsed);
-//   }
+    const contents = await readFileAsync(path.join(directory, file));
+    const parsed = JSON.parse(contents.toString());
+    allContributors = allContributors.concat(parsed);
+  }
 
-//   const allTierUsers = allBalances.filter(bal => bal.type !== 'contract').map(bal => bal.wallet.toLowerCase()).filter((x, i, a) => a.indexOf(x) == i);
-//   console.log('All tier users');
-//   console.log(JSON.stringify(allTierUsers));
+  const sanitizedAllContributors = [];
 
-//   return allTierUsers;
-// }
+  for (let i = 0; i < allContributors.length; i++) {
+    const walletType = await getWalletType(allContributors[i].wallet);
+    sanitizedAllContributors.push(Object.assign(allContributors[i], {
+      type: walletType
+    }));
+  }
+
+  writeAllContributors({
+    data: sanitizedAllContributors
+  });
+
+  // const allTierUsers = allBalances.map(bal => bal.wallet.toLowerCase()).filter((x, i, a) => a.indexOf(x) == i);
+  // console.log('All tier users');
+  // console.log(JSON.stringify(allTierUsers));
+
+  // return allTierUsers;
+}
 
 (async () => {
   try {
