@@ -1,0 +1,22 @@
+[
+  {
+    "wallet": "0xC3746825f13c07Dcd7e6fDb9C0c80A9aFFb18952",
+    "weiAmount": "330000000000000000",
+    "blockNumber": 4860310
+  },
+  {
+    "wallet": "0x52AF787439a82f36d6eF6B0dA0f0E5eCCe29fF90",
+    "weiAmount": "120000000000000000",
+    "blockNumber": 4921413
+  },
+  {
+    "wallet": "0x9023Ef16968FFea318838A223ef2A79bd9f99F88",
+    "weiAmount": "150000000000000000",
+    "blockNumber": 4945416
+  },
+  {
+    "wallet": "0x1E36A5979c613F52F8CB956638B07602C7e7e1F7",
+    "weiAmount": "6000000000000000",
+    "blockNumber": 4949122
+  }
+]

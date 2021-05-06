@@ -12,10 +12,10 @@ const readFileAsync = promisify(fs.readFile);
 
 const config = {
   web3Url: 'https://rpc-mainnet.maticvigil.com/v1/749c711c29a1bc4760bda531cf193fbe4ddcc124',
-  fromBlock: 4836320,
-  toBlock: 4949029,
+  fromBlock: 5888579,
+  toBlock: 6010387,
   blocksPerBatch: 1000,
-  offeringAddress: "0x3142948e307df1463e3920e6da1d3e4fc7d6a3ee"
+  offeringAddress: "0x1F9c343Ad741B394007F0A654403b17D0621FdB8"
 }
 
 const web3 = new Web3(new Web3.providers.HttpProvider(config.web3Url));
