@@ -1,0 +1,12 @@
+[
+  {
+    "wallet": "0x6777529D538c57D6CC6d46DA4610758245470dAb",
+    "weiAmount": "1200000000000000",
+    "blockNumber": 9476836
+  },
+  {
+    "wallet": "0x9B13bD15975F9Fa85284d7f1cef447F8d7302b13",
+    "weiAmount": "600000000000000",
+    "blockNumber": 9482086
+  }
+]
